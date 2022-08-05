@@ -43,6 +43,8 @@ end
 mt.__index = function (self, index)
   if index == 'sandbox' then
     return sandbox
+  elseif index == 'createEnvironment' then
+    return createEnvironment
   end
 end
 
