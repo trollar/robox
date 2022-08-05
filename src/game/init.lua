@@ -5,7 +5,7 @@ local function createProxy()
   return proxy
 end
 
-local cachedProxy: userdata
+local cachedProxy
 
 return function (new_env)
   if new_env or not cachedProxy then
