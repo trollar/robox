@@ -36,6 +36,8 @@ local function sandbox(code, options)
   else
     error("Loadstring failed to execute\n"..err)
   end
+
+  return func
 end
 
 mt.__index = function (self, index)
