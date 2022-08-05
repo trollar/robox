@@ -43,3 +43,7 @@ mt.__index = function (self, index)
     return sandbox
   end
 end
+
+mt.__metatable = 'Locked!'
+
+return proxy
