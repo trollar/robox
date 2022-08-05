@@ -4,3 +4,17 @@ local function createProxy()
 
   return proxy
 end
+
+local cachedProxy: userdata
+
+return function (new_env)
+  if new_env or not cachedProxy then
+    local proxy = createProxy()
+
+    cachedProxy = proxy
+
+    return proxy
+  else
+    return cachedProxy
+  end
+end
