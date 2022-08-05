@@ -10,7 +10,7 @@ local function createEnvironment (new_env)
 end
 
 local function sandbox(code, options)
-  local loadstring
+  local loadstring = loadstring
   local new_env
   local environment
   if options then
